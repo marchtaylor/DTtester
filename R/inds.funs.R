@@ -1,7 +1,6 @@
 
 age.inds <- function(obj){
-  new.age <- obj$inds$age + 1
-  obj$inds[, age := new.age]
+  obj$inds[, age := age + 1][]
   return(obj)
 }
 
@@ -13,6 +12,6 @@ m.inds <- function(obj){
   ARGS <- c(ARGS, obj$inds[, ..args.incl]) # double dot '..' version
   # ARGS <- c(ARGS, inds[, args.incl, with = FALSE]) # 'with' version
 
-  obj$inds[, m := do.call(obj$m$model, ARGS)]
+  obj$inds[, m := do.call(obj$m$model, ARGS)][]
   return(obj)
 }
