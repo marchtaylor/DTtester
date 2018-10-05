@@ -3,13 +3,16 @@
 #' @param obj
 #' @param times
 #'
-#' @return
+#' @return list object
+#'
+#' @import data.table
+#'
 #' @export
 #'
 #' @examples
-#' library(data.table)
 #' obj <- create.obj(n=10)
 #' obj <- adv.obj(obj, times = 5)
+#' obj
 #'
 adv.obj <- function(obj, times = 1){
   for(i in seq(times)){
